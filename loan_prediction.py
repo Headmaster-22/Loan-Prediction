@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import warnings
+import joblib
 warnings.filterwarnings('ignore')
 
 data = pd.read_csv('Loan_Data.csv')
