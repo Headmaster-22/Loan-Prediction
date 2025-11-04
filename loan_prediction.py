@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import warnings
-import joblib
+import joblib as jb
 warnings.filterwarnings('ignore')
 
 data = pd.read_csv('Loan_Data.csv')
@@ -71,7 +71,7 @@ input_var['Dependents'] = dep.transform(input_var[['Dependents']])
 
 
 
-model = joblib.load('loanpredictionmodel.pkl')
+model = jb.load('loanpredictionmodel.pkl')
 predict = model.predict(input_var)
 
 
